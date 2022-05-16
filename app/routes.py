@@ -29,6 +29,7 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+
 posts = [
     {
         'author': 'Corey Schafer',
