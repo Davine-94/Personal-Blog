@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1615147342761-9238e15d8b96?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1001&q=80" class="card__image" alt="brown couch" />
+  <div class="card__content">
+    <span class="card__title">Author: {{ data.author }}</span>
+    <p>Quote: {{ data.quote }}</p>
+  </div>
+</div>
     {% for post in posts %}
         <article class="media content-section">
-          <div class="media-body">
+          <div class="card">
             <div class="article-metadata">
               <a class="mr-2" href="#">{{ post.author }}</a>
               <small class="text-muted">{{ post.date_posted }}</small>
@@ -10,6 +17,7 @@
             <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
           </div>
-        </article>
+        </article>   
+
     {% endfor %}
 {%endblock content%}

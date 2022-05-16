@@ -1,5 +1,7 @@
 from datetime import datetime
 from flask import render_template, flash, redirect, url_for
+import json
+import requests
 from app import app
 from flask_sqlalchemy import SQLAlchemy
 from app.forms import RegistrationForm, LoginForm
@@ -45,10 +47,12 @@ posts = [
     }
 ]
 
-@app.route("/")
+@app.route("/", methods = ['GET'])
 def home():
     title = 'Daily Dose of Inspiration'
-    return render_template("index.html", title=title, posts=posts)
+    req = requests.get('http://quotes.stormconsultancy.co.uk/random.json')
+    data= json.loads(req.content)
+    return render_template("index.html", title=title, posts=posts, data= data)
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
