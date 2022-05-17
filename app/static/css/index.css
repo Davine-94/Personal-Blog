@@ -29,7 +29,7 @@ body {
     background-image: url('../img/background-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background: #9b769b;
+    background: #f0b4f0;
     padding: 10px 20px;
     border: 1px solid #dddddd;
     border-radius: 3px;
@@ -83,7 +83,7 @@ body {
     font-size: 2.5rem;
   }
   .card {
-    max-width: 500px;
+    max-width: 1000px;
     border-radius: var(--border-radius-primary);
     box-shadow: 24px 24px 80px rgba(211, 134, 198, 0.1);
     padding: 20px 20px 28px 20px;
@@ -93,12 +93,15 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-image: url('../img/background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
   
   }
   
   .card__image {
     width: 100%;
-    max-height: 200px;
+    max-height: 100px;
     border-radius: var(--border-radius-primary);
     object-fit: cover;
     margin-bottom: 18px;
@@ -119,10 +122,7 @@ body {
     margin-left: -4px;
   }
   .card__content {
-    background-image: url('../img/background-image.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #9b769b;
+    background-color: #f5bbf5;
     box-sizing: border-box;
     display: flex;
     align-items: center;
